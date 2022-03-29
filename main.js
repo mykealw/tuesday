@@ -40,20 +40,20 @@ function draw(){
     document.getElementById('boxes').innerHTML = template
 }
 
-function weight(){
- boxHere = packages
-    boxHere = packages.filter(b => b.heavy)
-    draw()
-}
+// function weight(){
+//  boxHere = packages
+//     boxHere = packages.filter(b => b.heavy)
+//     draw()
+// }
 
-function priority(){
-    boxHere = packages
-       boxHere = packages.filter(b => b.priority)
-       draw()
-   }
+// function priority(){
+//     boxHere = packages
+//        boxHere = packages.filter(b => b.priority)
+//        draw()
+//    }
 
    function test(thing){
-    boxHere = packages
+    // boxHere = packages
     boxHere = packages.filter(b => b[thing])
     draw()
    }
