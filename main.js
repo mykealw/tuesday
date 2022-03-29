@@ -20,14 +20,13 @@ let compChoice = packages[1]
 // }
 
 function startGame(){
-    boxHere = packages
+    boxHere = JSON.parse(JSON.stringify(packages))
     const index = Math.floor(Math.random() * (boxHere.length -1))
     draw()
 }
 
 function draw(){
     let template =''
-let boxHere = packages
     for (let i = 0; i < boxHere.length; i++) {
         const box = boxHere[i];
         template += `
@@ -42,15 +41,24 @@ let boxHere = packages
 }
 
 function weight(){
-    
-    boxHere = boxHere.filter(b => !b.heavy)
+ boxHere = packages
+    boxHere = packages.filter(b => b.heavy)
     draw()
 }
 
+function priority(){
+    boxHere = packages
+       boxHere = packages.filter(b => b.priority)
+       draw()
+   }
+
+   function test(thing){
+    boxHere = packages
+    boxHere = packages.filter(b => b[thing])
+    draw()
+   }
 
 
 
 
 startGame()
-
-// draw()
